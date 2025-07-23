@@ -1,0 +1,138 @@
+/* Navbar Container */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0d1b2a;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo .logo-img {
+  width: 150px;
+  height: auto;
+}
+
+/* Navigation Links */
+.navbar-links {
+  display: flex;
+  gap: 30px;
+  margin-right: 60px; /* Space from right edge */
+}
+
+.navbar-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-links a:hover {
+  background-color: #1b263b;
+  color: #00b4d8;
+}
+
+/* Menu Button - ALWAYS VISIBLE */
+.menu-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  display: block; /* Always visible */
+  padding: 5px;
+  z-index: 1001;
+}
+
+/* Mobile Menu Form */
+.menu-form-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 400px;
+  height: 100vh;
+  background-color: white;
+  z-index: 999;
+  padding: 30px;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.menu-form h2 {
+  color: #0d1b2a;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #0d1b2a;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.download-button {
+  width: 100%;
+  padding: 14px;
+  background-color: #00b4d8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+}
+
+.download-button:hover {
+  background-color: #0096c7;
+}
+.desktop-links{
+ 
+}
+.desktop-links{
+  justify-content: flex-end !important;
+}
+
+/* Responsive adjustments */
+@media (min-width: 769px) {
+  .menu-button {
+    display: none;
+  }
+
+  .menu-form-container {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+}

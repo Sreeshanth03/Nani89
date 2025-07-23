@@ -4,7 +4,7 @@ import "./Tech.css";
 
 const Tech = () => {
   return (
-    <div className="footer-container">
+    <div className="footer-container" id='contact'>
       {/* Marquee Effect */}
       <div className="marquee">
         <div className="marquee-content">

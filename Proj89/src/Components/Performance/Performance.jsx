@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Performance.css";
-
+import { GiAchievement } from "react-icons/gi";
 const Performance = () => {
   const metrics = [
     {
@@ -27,17 +27,17 @@ const Performance = () => {
       color: "#ec4899",
       delay: "0.4s"
     },
-    {
-      icon: "💰",
-      text: "Projects from ₹1.5L to ₹1Cr+",
-      color: "#f59e0b",
-      delay: "0.5s"
-    }
+    // {
+    //   icon: "",
+    //   text: "Achi",
+    //   color: "#f59e0b",
+    //   delay: "0.5s"
+    // }
   ];
 
   return (
     <div className="performance-container">
-      <h1 className="performance-title">Performance Snapshot</h1>
+      <h1 className="performance-title">   Achievements <GiAchievement/> <h4>We are Increasing Business Success</h4></h1>
       <div className="performance-metrics">
         {metrics.map((metric, index) => (
           <div 

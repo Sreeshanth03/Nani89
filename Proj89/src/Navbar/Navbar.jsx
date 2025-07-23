@@ -18,17 +18,10 @@ const Navbar = () => {
         }}
       >
         {/* Left: Logo */}
-        <div className="navbar-logo">
-          <img
-            src="../../public/Logo/WhatsApp Image 2025-07-22 at 19.47.49_b9ab8e91.jpg"
-            alt="logo"
-            width={250}
-            height={50}
-          />
-        </div>
+      
 
         {/* Right: Content */}
-        <div className="navbar-content" >
+        <div className="navbar-content" style={{textAlign:"center"}} >
           <h1>AI-Driven Digital Transformation</h1>
           <h4>
             Harness AI, Data Science & Modern Software to future-proof your
@@ -41,18 +34,10 @@ const Navbar = () => {
           </div>
        
         </div>
-        {/* Menu bar */}
-           <div style={{margin:"top"}}>
-                <DropdownButton id="dropdown-basic-button" title={<IoMenuSharp size={40} />}     variant="light">
-      <Dropdown.Item href="#/action-1">About</Dropdown.Item>
-      <Dropdown.Item href="#/action-2">Our Solutions</Dropdown.Item>
-      <Dropdown.Item href="#/action-3">Certified by </Dropdown.Item>
-      <Dropdown.Item href="#/action-3">Contact Us </Dropdown.Item>
-    </DropdownButton>
-{/* <IoMenuSharp  size={60}/> */}
+   
 
 
-           </div>
+          
       </div>
     </div>
   );

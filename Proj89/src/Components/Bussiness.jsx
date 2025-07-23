@@ -4,7 +4,7 @@ import "./Business.css"
 
 const Bussiness = () => {
   return (
-    <div >
+    <div id="home" >
       {/* Trusted by Startups to Enterprises */}
       <div >
 

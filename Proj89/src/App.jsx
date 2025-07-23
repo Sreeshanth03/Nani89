@@ -9,18 +9,25 @@ import Tech from './Components/Tech/Tech';
 import Performance from './Components/Performance/Performance';
 import Image from './Components/Image/Image';
 import Images5 from './Components/Images5/Images5';
+import Navbar5 from './Components/Navbar5/Navbar5';
+import AboutCompany from './Components/AboutCompany/AboutCompany';
+
 const App = () => {
   return (
     <div>
+      <Navbar5/>
       <Navbar />
-      <hr />
+      <br />
 
       <div className="section-gap"><Bussiness /></div>
       <div className="section-gap"><Image /></div>
+      <div className="section-gap"><AboutCompany/> </div>
       <div className="section-gap"><Vision /></div>
       <div><Images5/></div>
+   
       <div className="section-gap"><Industries /></div>
       <div className="section-gap"><Cilent /></div>
+         
       <div className="section-gap"><Performance /></div>
       <div ><Tech /></div>
     </div>

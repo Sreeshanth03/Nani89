@@ -1,4 +1,4 @@
-/* Container */
+/* Main navbar container - no sticky */
 .navbar-container {
   background: linear-gradient(to right, #2c3e50, #3498db);
   padding: 3rem 1.5rem;
@@ -6,11 +6,23 @@
   animation: fadeSlideIn 1s ease-out both;
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  position: relative;
+  position: relative !important;  /* ✅ Prevent sticky/fixed */
   overflow: hidden;
+  z-index: 1 !important;
+
 }
 
-/* Background effect */
+/* Remove sticky effect from all potential elements */
+.navbar-container,
+.navbar-flex,
+header,
+nav {
+  position: relative !important;
+  top: auto !important;
+  z-index: 1 !important;
+}
+
+/* Background floating animation */
 .navbar-container::before {
   content: "";
   position: absolute;
@@ -28,7 +40,7 @@
   z-index: 1;
 }
 
-/* Flexbox layout */
+/* Flex layout */
 .navbar-flex {
   display: flex;
   align-items: center;
@@ -37,15 +49,14 @@
   gap: 15rem !important;
 }
 
-/* Logo styles */
+/* Logo */
 .navbar-logo img {
-  /* width: 180px; */
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Content area */
+/* Content (headings and text) */
 .navbar-content {
   flex: 1;
 }
@@ -102,7 +113,29 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* --- ANIMATIONS --- */
+/* Desktop links spacing */
+.desktop-links {
+  display: flex;
+  gap: 30px;
+  margin-left: 60px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.desktop-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.desktop-links a:hover {
+  color: #00f0ff;
+  transform: scale(1.05);
+}
+
+/* --- Animations --- */
 @keyframes backgroundFloat {
   0%, 100% {
     transform: translate(0%, 0%) rotate(0deg);
@@ -156,12 +189,13 @@
   }
 }
 
-/* --- RESPONSIVE --- */
+/* --- Responsive --- */
 @media (max-width: 768px) {
   .navbar-flex {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 3rem !important;
   }
 
   .navbar-content h1,
@@ -192,4 +226,3 @@
     font-size: 1.1rem;
   }
 }
-
