@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { IoMenuSharp, IoClose } from "react-icons/io5";
 import './Navbar5.css';
 import { Button } from 'react-bootstrap';
+
 const Navbar5 = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -9,9 +10,13 @@ const Navbar5 = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <>
-      <div className="navbar-container">
+    <div >
+      <div className="navbar-container" style={{display:"flex",justifyContent:'space-between'}}>
         {/* Logo */}
         <div className="navbar-logo">
           <img
@@ -22,90 +27,49 @@ const Navbar5 = () => {
         </div>
 
         {/* Desktop Navigation Links */}
-        {/* <div className="desktop-links" style={{justifyContent:'space-between'}}>
-          <a href="#home" style={{textDecoration:"none", color:"white"}}>Home</a>
-          <a href="#about" style={{textDecoration:"none", color:"white"}}>About</a>
-          <a href="#contact" style={{textDecoration:"none", color:"white"}}>Contact</a>
-        </div> */}
-        <div className="desktop-links" style={{
-  display: "flex",
-  gap: "30px",
-  marginRight: "60px",
-  alignItems: "center",
-  justifyContent:'flex-end'
-}}>
-  <a href="#home" style={{
-    textDecoration: "none",
-    color: "white",
-    fontSize: "18px",
-    fontWeight: "500",
-    padding: "8px 12px",
-    borderRadius: "6px"
-  }}>Home</a>
+        <div className="desktop-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
 
-  <a href="#about" style={{
-    textDecoration: "none",
-    color: "white",
-    fontSize: "18px",
-    fontWeight: "500",
-    padding: "8px 12px",
-    borderRadius: "6px"
-  }}>About</a>
-
-  <a href="#contact" style={{
-    textDecoration: "none",
-    color: "white",
-    fontSize: "18px",
-    fontWeight: "500",
-    padding: "8px 12px",
-    borderRadius: "6px"
-  }}>Contact</a>
-</div>
-
-
-        {/* Mobile Menu Button - ALWAYS VISIBLE */}
+        {/* Mobile Menu Button */}
         <button className="mobile-menu-button" onClick={toggleMenu}>
           {isMenuOpen ? <IoClose size={30} /> : <IoMenuSharp size={30} />}
         </button>
       </div>
 
       {/* Mobile Menu Form */}
-      {isMenuOpen && (
-        <div className="mobile-menu">
-          <div className="menu-content">
-            <h2>Get it solutions for your Business</h2>
-            <form>
-              <div className="form-group">
-                <label>Name*</label>
-                <input type="text" placeholder="Enter your full name" required />
-              </div>
-              <div className="form-group">
-                <label>Email*</label>
-                <input type="email" placeholder="Enter your email address" required />
-              </div>
-              <div className="form-group">
-                <label>Mobile No*</label>
-                <input type="tel" placeholder="Enter your mobile number" required />
-              </div>
-              <div className="form-group">
-                <label>Comment</label>
-                <input type="text" placeholder="Enter your city" required />
-              </div>
-              {/* <div className="form-group">
-                <label>Course*</label>
-                <select required>
-                  {/* <option value="">Select a course</option>
-                  <option value="Full Stack Java">Full Stack Java</option> */}
-                {/* </select> */}
-              {/* </div> */} 
-              <Button type="submit" className="submit-button">
-                Submit
-              </Button>
-            </form>
-          </div>
+      <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
+        <div className="menu-content">
+          <button className="close-button" onClick={closeMenu}>
+            <IoClose size={24} />
+          </button>
+          <h2>Get IT solutions for your Business</h2>
+          <form>
+            <div className="form-group">
+              <label>Name*</label>
+              <input type="text" placeholder="Enter your full name" required />
+            </div>
+            <div className="form-group">
+              <label>Email*</label>
+              <input type="email" placeholder="Enter your email address" required />
+            </div>
+            <div className="form-group">
+              <label>Mobile No*</label>
+              <input type="tel" placeholder="Enter your mobile number" required />
+            </div>
+            <div className="form-group">
+              <label>Comment</label>
+              <input type="text" placeholder="Enter your city" />
+            </div>
+            <Button type="submit" className="submit-button">
+              Submit
+            </Button>
+          </form>
         </div>
-      )}
-    </>
+      </div>
+    </div>
   );
 };
 

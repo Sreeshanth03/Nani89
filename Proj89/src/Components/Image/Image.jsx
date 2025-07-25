@@ -4,7 +4,12 @@ import './Image.css';
 const Image = () => {
   return (
     <div className="marquee-container">
-           <h1> We Are Accredited By</h1>
+         <h1 style={{color:"white"}}>Trusted by Startups to Enterprises</h1>
+        <h4 style={{color:"white"}}>
+          We’ve helped 25+ companies reduce costs, boost efficiency, and scale
+          faster using data-driven systems.
+        </h4>
+           <h1 style={{color:"white"}}> We Are Accredited By</h1>
            <br></br>
       <div className="marquee">
      

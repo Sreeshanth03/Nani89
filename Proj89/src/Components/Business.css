@@ -1,137 +1,132 @@
-/* Business.css - Enhanced with Front Hover Effect */
-
+/* Typography */
 h1 {
   font-size: 2.4rem;
   text-align: center;
   margin-top: 2.5rem;
-  color: #1f2937;
+  color: #0f172a;
   font-weight: 700;
+  animation: fadeDown 0.8s ease-out forwards;
+  opacity: 0;
 }
 
 h4 {
   font-size: 1.2rem;
   text-align: center;
   margin-bottom: 2rem;
-  color: #4b5563;
+  color: #475569;
   padding: 0 1rem;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
 }
 
+/* Card Layout */
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  position: relative;
 }
 
-/* Animated Cards */
-.card-container .card {
-  background: linear-gradient(135deg, #f0f4ff, #ffffff);
-  padding: 2rem;
+/* Animated Card Styling */
+.card {
+  background: linear-gradient(145deg, #f0f4ff, #ffffff);
+  padding: 1.8rem 1.5rem;
+  border-radius: 20px;
   border: none;
-  border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   font-size: 1.05rem;
   font-weight: 500;
-  color: #1f2937;
+  color: #1e293b;
+  text-align: center;
   position: relative;
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  animation: fadeInUp 0.8s ease forwards;
+  box-shadow: 0 10px 25px rgba(30, 64, 175, 0.08);
+  transform: perspective(1000px) rotateX(5deg) scale(0.97);
   opacity: 0;
-  transform: translateY(20px);
-  z-index: 1;
+  animation: cardPopIn 1s ease forwards;
+  will-change: transform, opacity;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  line-height: 1.5;
 }
 
-/* Enhanced Hover effect - Comes to front */
-.card-container .card:hover {
-  transform: translateY(-10px) scale(1.03);
-  background: linear-gradient(135deg, #dff1ff, #ffffff);
-  box-shadow: 0 16px 40px rgba(52, 152, 219, 0.25);
-  z-index: 10;
-  border: 1px solid rgba(147, 197, 253, 0.4);
+/* Floating Emoji Styling */
+.emoji {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+  animation: floatEmoji 2.5s ease-in-out infinite;
+  opacity: 0.9;
 }
 
-/* Add a subtle shine effect on hover */
-.card-container .card:hover::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.3) 0%,
-    rgba(255, 255, 255, 0) 60%
-  );
-  pointer-events: none;
+/* Hover Effects */
+.card:hover {
+  transform: perspective(1000px) rotateX(0deg) scale(1.05);
+  box-shadow: 0 18px 45px rgba(59, 130, 246, 0.35);
+  background: linear-gradient(135deg, #dbeafe, #ffffff);
+  z-index: 5;
 }
 
-/* Card titles inside */
-.card-container .card h1 {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  color: #0f172a;
-  transition: transform 0.3s ease;
-}
-
-.card-container .card h4 {
-  font-size: 1rem;
-  color: #374151;
-  margin-top: 1rem;
-}
-
-/* Enhance title on hover */
-.card-container .card:hover h1 {
-  transform: translateX(5px);
-  color: #1d4ed8;
-}
-
-/* Fade-in animation */
-@keyframes fadeInUp {
+/* Animations */
+@keyframes fadeDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
   to {
+    transform: translateY(0px);
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
-/* Scroll trigger */
-.card-container .card:nth-child(1) { animation-delay: 0.1s; }
-.card-container .card:nth-child(2) { animation-delay: 0.2s; }
-.card-container .card:nth-child(3) { animation-delay: 0.3s; }
-.card-container .card:nth-child(4) { animation-delay: 0.4s; }
-.card-container .card:nth-child(5) { animation-delay: 0.5s; }
-.card-container .card:nth-child(6) { animation-delay: 0.6s; }
-.card-container .card:nth-child(7) { animation-delay: 0.7s; }
-.card-container .card:nth-child(8) { animation-delay: 0.8s; }
+@keyframes fadeUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 
-/* Responsive Design */
+@keyframes cardPopIn {
+  0% {
+    transform: perspective(1000px) rotateX(10deg) scale(0.9);
+    opacity: 0;
+  }
+  60% {
+    transform: perspective(1000px) rotateX(-4deg) scale(1.02);
+    opacity: 1;
+  }
+  100% {
+    transform: perspective(1000px) rotateX(0deg) scale(1);
+  }
+}
+
+@keyframes floatEmoji {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;
   }
-  .card-container {
-    padding: 1.5rem;
-  }
-  .card-container .card {
-    font-size: 0.95rem;
-    padding: 1.5rem;
-  }
-  /* Reduce hover effect on mobile */
-  .card-container .card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 12px 30px rgba(52, 152, 219, 0.2);
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.7rem;
-  }
   h4 {
+    font-size: 1rem;
+  }
+  .card {
     font-size: 0.95rem;
+    padding: 1.2rem;
+  }
+  .emoji {
+    font-size: 1.6rem;
   }
 }

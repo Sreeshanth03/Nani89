@@ -4,12 +4,11 @@
   padding: 3rem 1.5rem;
   color: #fff;
   animation: fadeSlideIn 1s ease-out both;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  /* border-bottom: 2px solid rgba(255, 255, 255, 0.2); */ /* ❌ removed middle line */
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  position: relative !important;  /* ✅ Prevent sticky/fixed */
+  position: relative !important;
   overflow: hidden;
   z-index: 1 !important;
-
 }
 
 /* Remove sticky effect from all potential elements */
@@ -44,14 +43,16 @@ nav {
 .navbar-flex {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 3rem;
   flex-wrap: wrap;
-  gap: 15rem !important;
+  text-align: center;
 }
 
 /* Logo */
 .navbar-logo img {
   height: auto;
+  max-width: 200px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -59,6 +60,7 @@ nav {
 /* Content (headings and text) */
 .navbar-content {
   flex: 1;
+  justify-content: center !important;
 }
 
 .navbar-content h1 {
@@ -69,22 +71,28 @@ nav {
   color: #ffffff;
   letter-spacing: 1px;
   animation: slideDownFade 1.2s ease forwards;
-  text-align: left;
+  text-align: center;
 }
 
 .navbar-content h4 {
   font-size: 1.4rem;
   font-weight: 400;
   max-width: 800px;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
   color: #e0e0e0;
   animation: fadeInUp 1.6s ease forwards;
-  text-align: left;
+  text-align: center;
 }
 
 /* Buttons */
+.navbar-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 .navbar-buttons .btn {
-  margin: 0 0.6rem 0.6rem 0;
   padding: 0.6rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
@@ -133,6 +141,18 @@ nav {
 .desktop-links a:hover {
   color: #00f0ff;
   transform: scale(1.05);
+}
+/* Add these two rules to your existing CSS */
+.navbar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.navbar-content h1,
+.navbar-content h4 {
+  width: 100%;
 }
 
 /* --- Animations --- */
@@ -195,27 +215,7 @@ nav {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 3rem !important;
-  }
-
-  .navbar-content h1,
-  .navbar-content h4 {
-    text-align: center;
-  }
-
-  .navbar-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navbar-buttons .btn {
-    margin: 0.5rem 0;
-    width: 80%;
-  }
-
-  .navbar-logo img {
-    width: 150px;
+    gap: 2.5rem;
   }
 
   .navbar-content h1 {
@@ -224,5 +224,20 @@ nav {
 
   .navbar-content h4 {
     font-size: 1.1rem;
+  }
+
+  .navbar-buttons {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .navbar-buttons .btn {
+    width: 80%;
+    margin: 0.5rem 0;
+  }
+
+  .navbar-logo img {
+    width: 150px;
   }
 }

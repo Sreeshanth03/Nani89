@@ -32,7 +32,7 @@ const Industries = () => {
       delay: "0.4s"
     },
     {
-      title: "GovTech",
+      title: "Government",
       description: "Citizen Portals, E-Governance",
       icon: "🏛️",
       color: "linear-gradient(135deg, #ec4899, #db2777)",
@@ -53,10 +53,12 @@ const Industries = () => {
               '--animation-delay': industry.delay
             }}
           >
-            <div className="card-icon">{industry.icon}</div>
-            <div className="card-content">
-              <h3 className="card-title">{industry.title}</h3>
-              <p className="card-description">{industry.description}</p>
+            <div className="card-content-wrapper">
+              <div className="card-icon">{industry.icon}</div>
+              <div className="card-content">
+                <h3 className="card-title">{industry.title}</h3>
+                <p className="card-description">{industry.description}</p>
+              </div>
             </div>
             <div className="card-wave"></div>
           </div>
