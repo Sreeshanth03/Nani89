@@ -26,7 +26,11 @@ const Bussiness = () => {
       </div>
 
       <div className="stats-section">
-        <h1>Business Stats That Matter</h1>
+        <h1> Trusted by Startups to Global Enterprises</h1>
+   <p style={{marginLeft:"100px"}}>From fast-growing startups to global brands, 36+ companies rely on Futureinov
+ Solutions to fuel innovation, reduce costs, and scale smarter—powered by AI and IT
+ excellence.</p>
+ <h4> Real Results. Real Impact. Our business stats</h4>
         <div className="card-container">
           {cardData.map((card, index) => (
             <Card className="card" key={index} style={{ animationDelay: `${0.2 + index * 0.1}s` }}>
@@ -34,7 +38,9 @@ const Bussiness = () => {
               {card.text}
             </Card>
           ))}
+          
         </div>
+        <h4> Let Futureinvo turn your challenges into measurable success—smarter, faster, and globally scalable</h4>
       </div>
     </div>
   );

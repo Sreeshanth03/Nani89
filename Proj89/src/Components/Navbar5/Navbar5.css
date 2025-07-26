@@ -80,6 +80,12 @@
 .submit-button:hover {
   background-color: #1b263b;
 }
+.thank-you-message {
+  text-align: center;
+  margin-top: 20px;
+  color: green;
+  font-weight: bold;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {

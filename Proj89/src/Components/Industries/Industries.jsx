@@ -37,6 +37,27 @@ const Industries = () => {
       icon: "🏛️",
       color: "linear-gradient(135deg, #ec4899, #db2777)",
       delay: "0.5s"
+    },
+    {
+      title: "BPO",
+      description: "CRM Tools, Support Automation",
+      icon: "📞",
+      color: "linear-gradient(135deg, #06b6d4, #0284c7)",
+      delay: "0.6s"
+    },
+    {
+      title: "Ecommerce",
+      description: "AI Shopping, Inventory Dashboards",
+      icon: "🛒",
+      color: "linear-gradient(135deg, #f43f5e, #be123c)",
+      delay: "0.7s"
+    },
+    {
+      title: "NGOs",
+      description: "Awareness Portals, Donor Analytics",
+      icon: "🤝",
+      color: "linear-gradient(135deg, #84cc16, #65a30d)",
+      delay: "0.8s"
     }
   ];
 

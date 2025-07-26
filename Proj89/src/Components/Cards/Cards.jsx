@@ -1,135 +1,137 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Cards.css';
-import { Card } from 'react-bootstrap';
+import { Card, Modal, Button } from 'react-bootstrap';
+
+const services = [
+  {
+    icon: "🤖",
+    title: "Artificial Intelligence (AI) Solutions",
+    points: [
+      "AI-powered Chatbots (LeadGen, HR, Customer Support)",
+      "Image & Video Intelligence",
+      "AI OCR & Document Intelligence"
+    ]
+  },
+  {
+    icon: "📊",
+    title: "Data Science & Big Data Analytics",
+    points: [
+      "Data Warehousing & ETL Pipelines",
+      "Real-Time Analytics Dashboards",
+      "Predictive & Prescriptive Models"
+    ]
+  },
+  {
+    icon: "🧠",
+    title: "Machine Learning & Deep Learning",
+    points: [
+      "Forecasting & Time-Series Analysis",
+      "Fraud Detection",
+      "Recommendation Systems"
+    ]
+  },
+  {
+    icon: "🌐",
+    title: "Full-Stack Web & SaaS Development",
+    points: [
+      "Scalable SaaS Platforms (ERP, CRM, LMS)",
+      "B2B/B2C Portals with Custom Roles",
+      "API-first Backend (REST, GraphQL)"
+    ]
+  },
+  {
+    icon: "📱",
+    title: "Mobile App Development",
+    points: [
+      "Android, iOS, Cross-Platform (Flutter/React Native)",
+      "AI-Integrated UX (Voice, Camera, Suggestions)",
+      "Push Notification Systems"
+    ]
+  },
+  {
+    icon: "☁️",
+    title: "Cloud Services & DevOps Automation",
+    points: [
+      "AWS | Azure | GCP Architecture",
+      "Dockerization & Kubernetes",
+      "Serverless (Lambda, Cloud Run)"
+    ]
+  },
+  {
+    icon: "🔐",
+    title: "Cybersecurity & Compliance",
+    points: [
+      "Security Audits & Pen Testing",
+      "Zero Trust Architecture",
+      "End-to-End Encryption"
+    ]
+  },
+  {
+    icon: "🧠",
+    title: "GPT/LLM-Based Services",
+    points: [
+      "Internal BI Assistants (GPT)",
+      "Resume Screening & HR Automation",
+      "E-commerce Copywriting Bots"
+    ]
+  },
+  {
+    icon: "🚀",
+    title: "Digital Transformation Consulting",
+    points: [
+      "Legacy System Modernization",
+      "Process Automation Roadmapping",
+      "Change Management Strategy"
+    ]
+  }
+];
 
 const Cards = () => {
+  const [show, setShow] = useState(false);
+  const [activeTitle, setActiveTitle] = useState("");
+
+  const handleClose = () => setShow(false);
+  const handleShow = (title) => {
+    setActiveTitle(title);
+    setShow(true);
+  };
+
   return (
     <div className="cards-wrapper">
-      <h1 className="cards-title">🔍 Solutions We Offer</h1>
+      <h1 className="cards-title">🔍 <strong>Solutions We Offer</strong></h1>
       <div className="cards-grid">
-
-        {/* 1. AI Solutions */}
-        <Card className="cards-item">
-          <Card.Body>
-            <Card.Title>🤖 Artificial Intelligence (AI) Solutions</Card.Title>
-            <ul>
-              <li>AI-powered Chatbots (LeadGen, HR, Customer Support)</li>
-              <li>Image & Video Intelligence</li>
-              <li>AI OCR & Document Intelligence</li>
-           
-            </ul>
-         
-          </Card.Body>
-        </Card>
-
-        {/* 2. Data Science */}
-        <Card className="cards-item">
-          <Card.Body>
-            <Card.Title>📊 Data Science & Big Data Analytics</Card.Title>
-            <ul>
-              <li>Data Warehousing & ETL Pipelines</li>
-              <li>Real-Time Analytics Dashboards</li>
-              <li>Predictive & Prescriptive Models</li>
-        </ul>
-          </Card.Body>
-        </Card>
-
-        {/* 3. Machine Learning */}
-        <Card className="cards-item">
-          <Card.Body>
-            <Card.Title>🧠 Machine Learning & Deep Learning</Card.Title>
-            <ul>
-              <li>Forecasting & Time-Series Analysis</li>
-              <li>Fraud Detection</li>
-              <li>Recommendation Systems</li>
-         
-            </ul>
-          
-          </Card.Body>
-        </Card>
-
-        {/* 4. Full-Stack Web */}
-        <Card className="cards-item">
-          <Card.Body>
-            <Card.Title>🌐 Full-Stack Web & SaaS Development</Card.Title>
-            <ul>
-              <li>Scalable SaaS Platforms (ERP, CRM, LMS)</li>
-              <li>B2B/B2C Portals with Custom Roles</li>
-              <li>API-first Backend (REST, GraphQL)</li>
-         
-            </ul>
-         
-          </Card.Body>
-        </Card>
-
-        {/* 5. Mobile App Development */}
-        <Card className="cards-item">
-          <Card.Body>
-            <Card.Title>📱 Mobile App Development</Card.Title>
-            <ul>
-              <li>Android, iOS, Cross-Platform (Flutter/React Native)</li>
-              <li>AI-Integrated UX (Voice, Camera, Suggestions)</li>
-              <li>Push Notification Systems</li>
-        
-            </ul>
-         
-          </Card.Body>
-        </Card>
-
-        {/* 6. Cloud & DevOps */}
-        <Card className="cards-item">
-          <Card.Body>
-            <Card.Title>☁ Cloud Services & DevOps Automation</Card.Title>
-            <ul>
-              <li>AWS | Azure | GCP Architecture</li>
-              <li>Dockerization & Kubernetes</li>
-              <li>Serverless (Lambda, Cloud Run)</li>
-      
-            </ul>
-        
-          </Card.Body>
-        </Card>
-
-        {/* 7. Cybersecurity */}
-        <Card className="cards-item">
-          <Card.Body>
-            <Card.Title>🔐 Cybersecurity & Compliance</Card.Title>
-            <ul>
-              <li>Security Audits & Pen Testing</li>
-              <li>Zero Trust Architecture</li>
-              <li>End-to-End Encryption</li>
-           
-            </ul>
-         
-          </Card.Body>
-        </Card>
-
-        {/* 8. GPT/LLM Services */}
-        <Card className="cards-item">
-          <Card.Body>
-            <Card.Title>🧠 GPT/LLM-Based Services</Card.Title>
-            <ul>
-              <li>Internal BI Assistants (GPT)</li>
-              <li>Resume Screening & HR Automation</li>
-              <li>E-commerce Copywriting Bots</li>
-       
-            </ul>
-  
-          </Card.Body>
-        </Card>
-        <Card className="cards-item">
-  <Card.Body>
-    <Card.Title>🚀 Digital Transformation Consulting</Card.Title>
-    <ul>
-      <li>Legacy System Modernization</li>
-      <li>Process Automation Roadmapping</li>
-      <li>Change Management Strategy</li>
-    
-    </ul>
-  </Card.Body>
-</Card>
-
+        {services.map((service, index) => (
+          <Card
+            key={index}
+            className="cards-item"
+            onClick={() => handleShow(service.title)}
+          >
+            <Card.Body>
+              <span className="card-emoji">{service.icon}</span>
+              <div className="card-title-text">{service.title}</div>
+              <ul>
+                {service.points.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
+            </Card.Body>
+          </Card>
+        ))}
       </div>
+
+      {/* Popup Form */}
+      <Modal show={show} onHide={handleClose} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Lead Capture Form</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p><strong>Interested in:</strong> {activeTitle}</p>
+          <input type="text" placeholder="Your Name" className="form-control mb-2" />
+          <input type="email" placeholder="Your Email" className="form-control mb-2" />
+          <textarea placeholder="Your Message" className="form-control mb-2" rows="3"></textarea>
+          <Button variant="primary" onClick={handleClose}>Submit</Button>
+        </Modal.Body>
+      </Modal>
     </div>
   );
 };

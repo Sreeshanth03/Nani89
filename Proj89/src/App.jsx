@@ -16,11 +16,15 @@ import Contact5 from './Components/Contact5/Contact5';
 import Trust from './Components/Trust/Trust';
 import {Routes,Route} from "react-router-dom"
 import PrivacyPolicy from './Components/PrivacyPolicy/PrivacyPolicy';
+import Coll from './Components/Coll/Coll';
+import Achi from './Components/Achivement/Achi';
 const App = () => {
   return (
     <div>
       <Navbar5/>
+
       <Navbar />
+            <Coll/>
     
 <div className="section-gap"><Image /></div>
       <div className="section-gap"><Bussiness /></div>
@@ -28,25 +32,23 @@ const App = () => {
       
       {/* <div className="section-gap"><AboutCompany/> </div> */}
       <div><Trust/></div>
-      <div ><Vision /></div>
+      {/* <div ><Vision /></div> */}
       {/* <div><Images5/></div> */}
    
       <div ><Industries /></div>
       <div  ><Cilent /></div>
          
-      <div><Performance /></div>
+      {/* <div><Performance /></div> */}
       {/* <div><Contact5/></div>
       <div><PrivacyPolicy/></div> */}
+      <Achi/>
        <Routes>
       <Route path="/" element={<Tech />} />
       <Route path="/contact5" element={<Contact5 />} />
       <Route path="/privacy" element={<PrivacyPolicy />} />
           {/* <Tech /> */}
         </Routes> 
-
-      
-    
-    </div>
+        </div>
   );
 };
 

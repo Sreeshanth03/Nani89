@@ -5,6 +5,7 @@ import { Button } from 'react-bootstrap';
 
 const Navbar5 = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -12,15 +13,21 @@ const Navbar5 = () => {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+    setFormSubmitted(false); // reset thank-you on close
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    setFormSubmitted(true);
   };
 
   return (
-    <div >
-      <div className="navbar-container" style={{display:"flex",justifyContent:'space-between'}}>
+    <div>
+      <div className="navbar-container" style={{ display: "flex", justifyContent: 'space-between' }}>
         {/* Logo */}
         <div className="navbar-logo">
           <img
-            src="../../../public/Logo/WhatsApp Image 2025-07-22 at 19.47.49_b9ab8e91.jpg"
+            src="/Logo/Icon.jpg"
             alt="Logo"
             className="logo-img"
           />
@@ -45,28 +52,38 @@ const Navbar5 = () => {
           <button className="close-button" onClick={closeMenu}>
             <IoClose size={24} />
           </button>
-          <h2>Get IT solutions for your Business</h2>
-          <form>
-            <div className="form-group">
-              <label>Name*</label>
-              <input type="text" placeholder="Enter your full name" required />
+
+          <h4>
+            Partner with us to unlock scalable, Efficient, and unstoppable digital transformation.
+          </h4>
+
+          {!formSubmitted ? (
+            <form onSubmit={handleFormSubmit}>
+              <div className="form-group">
+                <label>Name*</label>
+                <input type="text" placeholder="Enter your full name" required />
+              </div>
+              <div className="form-group">
+                <label>Email*</label>
+                <input type="email" placeholder="Enter your email address" required />
+              </div>
+              <div className="form-group">
+                <label>Mobile No*</label>
+                <input type="tel" placeholder="Enter your mobile number" required />
+              </div>
+              <div className="form-group">
+                <label>Comment</label>
+                <input type="text" placeholder="Comment" />
+              </div>
+              <Button type="submit" className="submit-button">
+                Submit
+              </Button>
+            </form>
+          ) : (
+            <div className="thank-you-message">
+              <h3>Thank you! Your response has been submitted.</h3>
             </div>
-            <div className="form-group">
-              <label>Email*</label>
-              <input type="email" placeholder="Enter your email address" required />
-            </div>
-            <div className="form-group">
-              <label>Mobile No*</label>
-              <input type="tel" placeholder="Enter your mobile number" required />
-            </div>
-            <div className="form-group">
-              <label>Comment</label>
-              <input type="text" placeholder="Enter your city" />
-            </div>
-            <Button type="submit" className="submit-button">
-              Submit
-            </Button>
-          </form>
+          )}
         </div>
       </div>
     </div>

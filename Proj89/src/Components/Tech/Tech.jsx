@@ -1,99 +1,102 @@
-  import React from 'react';
-  import { FaInstagram, FaWhatsapp, FaEnvelope, FaLinkedin, FaTwitter } from 'react-icons/fa';
-  import { useNavigate } from 'react-router-dom';
-  import "./Tech.css";
+import React from 'react';
+import {
+  FaInstagram,
+  FaEnvelope,
+  FaLinkedin,
+  FaTwitter,
+  FaFacebook
+} from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
+import './Tech.css';
 
-  const Tech = () => {
-    const navigate = useNavigate();
+const Tech = () => {
+  const navigate = useNavigate();
 
-    const handleTermsClick = () => {
-      navigate('/contact5');
-    };
+  const handleAboutClick = () => navigate('/about');
+  const handleJobClick = () => navigate('/apply');
+  const handleContactClick = () => navigate('/contact');
+  const handlePolicyClick = () => navigate('/policies');
+  const handleTermsClick = () => navigate('/contact5');
+  const handlePrivacyClick = () => navigate('/privacy');
 
-    const handlePrivacyClick = () => {
-      navigate('/privacy');
-    };
-
-    return (
-      <div className="footer-container" id='contact'>
-        {/* Stats Section */}
-        <div className="stats-section">
-          <div className="stats-container">
-            <div className="stat-item">
-              <h3>70+</h3>
-              <p>tech modules delivered</p>
-            </div>
-            <div className="stat-item">
-              <h3>35+</h3>
-              <p>live platforms</p>
-            </div>
-            <div className="stat-item">
-              <h3>50+</h3>
-              <p>engineers onboard</p>
-            </div>
-            <div className="stat-item">
-              <h3>20+</h3>
-              <p>AI use cases</p>
-            </div>
-          </div>
+  return (
+    <div className="footer-container" id="contact">
+      {/* Top Header */}
+      <div className="footer-top-header">
+        <div className="footer-address">
+          📍 <strong>Address:</strong> Registered Office: 3-45/1 Ashoka Towers, 16th Floor, Nanakramguda, Financial District, Hyderabad.<br />
+          Regional Office: 4th Floor, Cyber Heights, Hitec City, Hyderabad.
         </div>
-
-        {/* Address Section */}
-        <div className="address-section">
-          <div className="address-container">
-            <div className="address-item">
-              <h4>Registration address</h4>
-              <p>3-45/1 Ashoka Towers, 16th Floor, Nanakramguda, Financial District, Hyderabad</p>
-            </div>
-            <div className="address-item">
-              <h4>Operation address</h4>
-              <p>4th Floor, Cyber Heights, Hitec City, Hyderabad</p>
-            </div>
-            <div className="address-item">
-              <h4>Branches</h4>
-              <pre></pre>
-              <p>Siddipet, Vizianagaram</p>
-            </div>
-          </div>
+        <div className="footer-phone">
+          📞 <strong>Phone:</strong> +91 79811 07131
         </div>
-
-        {/* Footer Bottom - single row layout */}
-        <div className="footer-bottom">
-          {/* Copyright - left side */}
-          <div className="copyright-info">
-            <p>© 2025 Futureinvo Technologies Pvt. Ltd. All Rights Reserved.</p>
-          </div>
-
-          {/* Policy Links - middle */}
-          <div className="policy-links">
-            <a href="#contact">Contact us : +917386879818</a>
-            <span className="divider">|</span>
-            <a href="#terms" onClick={handleTermsClick}>T&C</a>
-            <span className="divider">|</span>
-            <a href="#privacy" onClick={handlePrivacyClick}>Privacy policy</a>
-          </div>
-
-          {/* Social Links - right side */}
-          <div className="social-links">
-            <a href="https://instagram.com/futureinvo" target="_blank" rel="noopener noreferrer" className="social-icon">
-              <FaInstagram className="icon instagram" />
-            </a>
-            <a href="https://linkedin.com/company/futureinvo" target="_blank" rel="noopener noreferrer" className="social-icon">
-              <FaLinkedin className="icon linkedin" />
-            </a>
-            <a href="https://twitter.com/futureinvo" target="_blank" rel="noopener noreferrer" className="social-icon">
-              <FaTwitter className="icon twitter" />
-            </a>
-            <a href="https://wa.me/917386879818" target="_blank" rel="noopener noreferrer" className="social-icon">
-              <FaWhatsapp className="icon whatsapp" />
-            </a>
-            <a href="mailto:info.futureinvo@gmail.com" className="social-icon">
-              <FaEnvelope className="icon email" />
-            </a>
-          </div>
+        <div className="footer-email">
+          ✉️ <strong>Email:</strong> info.futureinvo@gmail.com
         </div>
       </div>
-    );
-  };
 
-  export default Tech;
+      {/* Main Footer */}
+      <div className="footer-main">
+        {/* Left Column */}
+        <div className="footer-left">
+          <img
+            src="/Icons/WhatsApp Image 2025-07-22 at 19.47.48_1dae13e4.jpg"
+            alt="Future Invo Logo"
+            className="footer-logo"
+          />
+          <p className="footer-tagline">
+            Join us to gain industry insights and hands-on experience for success in the digital world.
+          </p>
+          <div className="footer-social">
+            <p>Follow Us</p>
+            <a href="#" className="social-icon" aria-label="Facebook"><FaFacebook /></a>
+            <a href="#" className="social-icon" aria-label="Instagram"><FaInstagram /></a>
+            <a href="#" className="social-icon" aria-label="LinkedIn"><FaLinkedin /></a>
+            <a href="#" className="social-icon" aria-label="Twitter"><FaTwitter /></a>
+            <a href="#" className="social-icon" aria-label="Email"><FaEnvelope /></a>
+          </div>
+        </div>
+
+        {/* Middle Column */}
+        <div className="footer-middle">
+          <div className="address-block center-align">
+            <h4>Registered Address</h4>
+            <p>3-45/1 Ashoka Towers, 16th Floor,<br />Nanakramguda, Financial District, Hyderabad</p>
+          </div>
+          <div className="address-block center-align">
+            <h4>Branches</h4>
+            <p>Siddipet<br />Vizianagaram</p>
+          </div>
+          <div className="address-block center-align">
+            <h4>Operational Address</h4>
+            <p>4th Floor, Cyber Heights,<br />Hitec City, Hyderabad</p>
+          </div>
+          <div className="address-block center-align">
+            <h4>Upcoming Branches</h4>
+            <p>Bangalore<br />Vizag<br />Rajahmundry</p>
+          </div>
+        </div>
+
+        {/* Right Column */}
+        <div className="footer-right">
+          <h4 style={{marginLeft:"-290px"}}>QUICK LINKS</h4>
+          <ul className="quick-links">
+            <li onClick={handleAboutClick}>About us</li>
+            <li onClick={handleJobClick}>Apply for Job</li>
+            <li onClick={handleContactClick}>Contact us</li>
+            <li onClick={handlePolicyClick}>Policies</li>
+            <li onClick={handleTermsClick}>Terms & Conditions</li>
+            <li onClick={handlePrivacyClick}>Privacy Policy & Contact us</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Bottom */}
+      <div className="footer-bottom">
+        <p>© 2025 Futureinvo Technologies Pvt. Ltd. | All Rights Reserved</p>
+      </div>
+    </div>
+  );
+};
+
+export default Tech;

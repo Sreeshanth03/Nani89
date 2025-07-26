@@ -13,15 +13,17 @@ const Image = () => {
            <br></br>
       <div className="marquee">
      
-        <img src="/Logo/WhatsApp Image 2025-07-22 at 19.21.36_f9d63355.jpg" alt="img1" />
-        <img src="/Logo/WhatsApp Image 2025-07-22 at 19.21.37_321dd395.jpg" alt="img2" />
-        <img src="/Logo/WhatsApp Image 2025-07-22 at 19.21.37_8888793e.jpg" alt="img3" />
-        <img src="/Logo/WhatsApp Image 2025-07-22 at 19.21.37_ac792bd6.jpg" alt="img4" />
+      
+  <img src="/Scroll/WhatsApp Image 2025-07-22 at 19.21.36_f9d63355.jpg" alt="img2" />
+<img src="/Scroll/WhatsApp Image 2025-07-22 at 19.21.37_321dd395.jpg" alt="img3" />
+<img src="/Scroll/WhatsApp Image 2025-07-22 at 19.21.37_ac792bd6.jpg" alt="img4" />
+<img src="/Scroll/WhatsApp Image 2025-07-22 at 19.21.37_8888793e.jpg" alt="img1" />
         {/* Duplicate for smooth loop */}
-        <img src="/Logo/WhatsApp Image 2025-07-22 at 19.21.36_f9d63355.jpg" alt="img1-dup" />
-        <img src="/Logo/WhatsApp Image 2025-07-22 at 19.21.37_321dd395.jpg" alt="img2-dup" />
-        <img src="/Logo/WhatsApp Image 2025-07-22 at 19.21.37_8888793e.jpg" alt="img3-dup" />
-        <img src="/Logo/WhatsApp Image 2025-07-22 at 19.21.37_ac792bd6.jpg" alt="img4-dup" />
+      
+  <img src="/Scroll/WhatsApp Image 2025-07-22 at 19.21.36_f9d63355.jpg" alt="img2" />
+<img src="/Scroll/WhatsApp Image 2025-07-22 at 19.21.37_321dd395.jpg" alt="img3" />
+<img src="/Scroll/WhatsApp Image 2025-07-22 at 19.21.37_ac792bd6.jpg" alt="img4" />
+<img src="/Scroll/WhatsApp Image 2025-07-22 at 19.21.37_8888793e.jpg" alt="img1" />
       </div>
     </div>
   );
