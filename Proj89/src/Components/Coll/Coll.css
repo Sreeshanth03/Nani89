@@ -8,39 +8,56 @@
 .collaboration-section h2 {
   font-size: 1.8rem;
   margin-bottom: 20px;
+  color: #333;
 }
 
-.marquee {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-
-.marquee-content {
+.collaboration-logos {
   display: flex;
-  width: fit-content;
-  animation: scroll 30s linear infinite;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px 0;
 }
 
-.marquee-content img {
-  height: 100px;
+.collaboration-logos img {
+  height: 60px; /* default for laptops */
   width: auto;
-  margin: 0 20px;
   object-fit: contain;
-  vertical-align: middle;
   transition: transform 0.3s ease;
 }
 
-.marquee-content img:hover {
+.collaboration-logos img:hover {
   transform: scale(1.1);
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0%);
+/* ---------- Responsive Design ---------- */
+
+/* 📱 Phones */
+@media (max-width: 600px) {
+  .collaboration-section h2 {
+    font-size: 1.2rem;
   }
 
-  100% {
-    transform: translateX(-50%);
+  .collaboration-logos {
+    gap: 15px;
+  }
+
+  .collaboration-logos img {
+    height: 40px;
+  }
+}
+
+/* 📱📲 Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .collaboration-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .collaboration-logos {
+    gap: 25px;
+  }
+
+  .collaboration-logos img {
+    height: 50px;
   }
 }

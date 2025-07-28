@@ -4,11 +4,18 @@
   text-align: center;
 }
 
-.achi-header {
+/* Unified card */
+.achi-stats-card {
   background-color: #155f9f;
+  border-radius: 20px;
+  padding: 40px 20px;
   color: white;
-  padding: 30px 20px;
-  border-radius: 8px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Header inside the card */
+.achi-header {
   margin-bottom: 30px;
 }
 
@@ -17,6 +24,7 @@
   letter-spacing: 1px;
   margin-bottom: 8px;
   text-transform: uppercase;
+  color: #cce6ff;
 }
 
 .achi-title {
@@ -25,22 +33,19 @@
   margin: 0;
 }
 
+/* Stats layout */
 .achi-stats-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
   gap: 25px;
-  background-color: #155f9f;
-  padding: 30px 20px;
-  border-radius: 40px;
 }
 
 .achi-stat {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
-  min-width: 140px;
+  min-width: 120px;
 }
 
 .emoji {
@@ -58,15 +63,10 @@
   margin-top: 4px;
 }
 
-/* Media Queries */
-
+/* Responsive styles */
 @media (max-width: 768px) {
   .achi-title {
     font-size: 22px;
-  }
-
-  .achi-stat {
-    min-width: 100px;
   }
 
   .emoji {
@@ -80,19 +80,31 @@
   .label {
     font-size: 14px;
   }
+
+  .achi-stat {
+    min-width: 100px;
+  }
 }
 
 @media (max-width: 480px) {
+  .achi-wrapper {
+    padding: 30px 10px;
+  }
+
+  .achi-stats-card {
+    padding: 25px 15px;
+  }
+
+  .achi-header {
+    margin-bottom: 20px;
+  }
+
   .achi-stats-container {
     flex-direction: column;
     align-items: center;
   }
 
-  .achi-header {
-    padding: 20px 10px;
-  }
-
-  .achi-wrapper {
-    padding: 30px 10px;
+  .achi-title {
+    font-size: 20px;
   }
 }

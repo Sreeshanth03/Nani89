@@ -10,7 +10,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   border-bottom: 1px solid #444;
-  font-size: 13px;
+  font-size: 14px;
   padding: 10px 0;
   gap: 10px;
 }
@@ -27,24 +27,34 @@
 .footer-middle,
 .footer-right {
   flex: 1;
-  min-width: 250px;
+  min-width: 50px;
   padding: 10px;
 }
 
+/* Logo Styling */
 .footer-logo {
-  width: 100px;
+  width: 200px;
   height: auto;
-  margin-bottom: 10px;
-  border-radius: 5px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
 
+.footer-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Tagline Styling */
 .footer-tagline {
-  margin-bottom: 10px;
-  color: #ccc;
-  line-height: 1.4;
-  font-size: 13px;
+  margin-bottom: 12px;
+  color: #e0e0e0;
+  line-height: 1.6;
+  font-size: 14px;
+  text-align: justify;
+  max-width: 300px;
 }
 
+/* Social Media */
 .footer-social {
   display: flex;
   align-items: center;
@@ -54,7 +64,7 @@
 }
 
 .footer-social p {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
   margin: 0;
 }
@@ -69,13 +79,17 @@
   color: #00aced;
 }
 
-.footer-right h4 {
+/* Section Titles */
+.footer-right h4,
+.address-block h4 {
   font-size: 16px;
-  margin-bottom: 10px;
   font-weight: bold;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+  color: white;
 }
 
-/* Styled bullets for quick links */
+/* Quick Links */
 .quick-links {
   list-style: none;
   padding-left: 0;
@@ -91,6 +105,7 @@
   cursor: pointer;
   transition: color 0.3s ease;
   text-align: left;
+  font-family: Arial, sans-serif;
 }
 
 .quick-links li::before {
@@ -107,15 +122,10 @@
   color: #00aced;
 }
 
+/* Address Section */
 .address-block {
   margin-bottom: 20px;
   text-align: center;
-}
-
-.address-block h4 {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 5px;
 }
 
 .address-block p {
@@ -123,15 +133,20 @@
   font-size: 14px;
   color: #ccc;
   line-height: 1.5;
+  font-family: Arial, sans-serif;
 }
 
+/* Footer Bottom */
 .footer-bottom {
   text-align: center;
   margin-top: 30px;
   font-size: 13px;
   color: #aaa;
+  font-family: Arial, sans-serif;
 }
-
+.footer-middle {
+  flex: 2;
+}
 /* Tablets */
 @media (max-width: 1024px) {
   .footer-main {
@@ -166,28 +181,33 @@
     text-align: center;
   }
 
+  .footer-logo {
+    width: 130px;
+    margin: 0 auto 15px auto;
+  }
+
+  .footer-tagline {
+    max-width: 90%;
+    margin: 0 auto 15px auto;
+    text-align: center;
+  }
+
   .footer-social {
     justify-content: center;
   }
 
-  .footer-right h4 {
-    font-size: 15px;
-  }
-
-  .quick-links li {
-    font-size: 13px;
-  }
-
+  .footer-right h4,
   .address-block h4 {
     font-size: 15px;
   }
 
-  .address-block p {
-    font-size: 13px;
-  }
-
   .quick-links li {
+    font-size: 13px;
     text-align: center;
     padding-left: 20px;
+  }
+
+  .address-block p {
+    font-size: 13px;
   }
 }

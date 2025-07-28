@@ -12,9 +12,9 @@ import './Tech.css';
 const Tech = () => {
   const navigate = useNavigate();
 
-  const handleAboutClick = () => navigate('/about');
-  const handleJobClick = () => navigate('/apply');
-  const handleContactClick = () => navigate('/contact');
+  const handleAboutClick = () => navigate('/About');
+  const handleJobClick = () => navigate('/LeadForm');
+  const handleContactClick = () => navigate('/Contact');
   const handlePolicyClick = () => navigate('/policies');
   const handleTermsClick = () => navigate('/contact5');
   const handlePrivacyClick = () => navigate('/privacy');
@@ -42,7 +42,7 @@ const Tech = () => {
           <img
             src="/Icons/WhatsApp Image 2025-07-22 at 19.47.48_1dae13e4.jpg"
             alt="Future Invo Logo"
-            className="footer-logo"
+            className="footer-logo" width={800} height={800}
           />
           <p className="footer-tagline">
             Join us to gain industry insights and hands-on experience for success in the digital world.
@@ -79,12 +79,12 @@ const Tech = () => {
 
         {/* Right Column */}
         <div className="footer-right">
-          <h4 style={{marginLeft:"-290px"}}>QUICK LINKS</h4>
+          <h4 style={{marginLeft:"-220px"}}>QUICK LINKS</h4>
           <ul className="quick-links">
             <li onClick={handleAboutClick}>About us</li>
             <li onClick={handleJobClick}>Apply for Job</li>
             <li onClick={handleContactClick}>Contact us</li>
-            <li onClick={handlePolicyClick}>Policies</li>
+            {/* <li onClick={handlePolicyClick}>Policies</li> */}
             <li onClick={handleTermsClick}>Terms & Conditions</li>
             <li onClick={handlePrivacyClick}>Privacy Policy & Contact us</li>
           </ul>

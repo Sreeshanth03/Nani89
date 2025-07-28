@@ -26,10 +26,10 @@ const Bussiness = () => {
       </div>
 
       <div className="stats-section">
-        <h1> Trusted by Startups to Global Enterprises</h1>
-   <p style={{marginLeft:"100px"}}>From fast-growing startups to global brands, 36+ companies rely on Futureinov
+        {/* <h1> Trusted by Startups to Global Enterprises</h1> */}
+   {/* <p style={{marginLeft:"100px"}}>From fast-growing startups to global brands, 36+ companies rely on Futureinov
  Solutions to fuel innovation, reduce costs, and scale smarter—powered by AI and IT
- excellence.</p>
+ excellence.</p> */}
  <h4> Real Results. Real Impact. Our business stats</h4>
         <div className="card-container">
           {cardData.map((card, index) => (

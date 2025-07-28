@@ -1,7 +1,57 @@
-/* Navbar5.css */
-/* Existing styles remain the same until .mobile-menu */
+/* Navbar Container */
+.navbar-container {
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1000;
+}
 
-/* Mobile Menu */
+/* Logo Styling */
+.navbar-logo {
+  flex-shrink: 0;
+}
+
+/* Desktop Navigation Links */
+.desktop-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.desktop-links a {
+  text-decoration: none;
+  color: #0d1b2a;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.desktop-links a:hover {
+  color: #007bff;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-button {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.mobile-menu-button svg {
+  font-size: 20px;
+  color: #0d1b2a;
+  vertical-align: middle;
+}
+
+/* Mobile Menu Styles */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -24,6 +74,7 @@
   position: relative;
 }
 
+/* Close Button */
 .close-button {
   position: absolute;
   top: 15px;
@@ -35,6 +86,7 @@
   padding: 5px;
 }
 
+/* Mobile Menu Heading */
 .menu-content h2 {
   color: #0d1b2a;
   margin-bottom: 25px;
@@ -43,6 +95,7 @@
   text-align: left;
 }
 
+/* Form Styling */
 .form-group {
   margin-bottom: 20px;
 }
@@ -63,6 +116,7 @@
   font-size: 0.9rem;
 }
 
+/* Submit Button */
 .submit-button {
   width: 100%;
   padding: 12px;
@@ -80,6 +134,8 @@
 .submit-button:hover {
   background-color: #1b263b;
 }
+
+/* Thank You Message */
 .thank-you-message {
   text-align: center;
   margin-top: 20px;
@@ -87,17 +143,17 @@
   font-weight: bold;
 }
 
-/* Responsive adjustments */
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .desktop-links {
     display: none;
   }
-  
+
   .mobile-menu {
     width: 80%;
     right: -80%;
   }
-  
+
   .mobile-menu.open {
     right: 0;
   }
@@ -108,8 +164,16 @@
     width: 90%;
     right: -90%;
   }
-  
+
   .mobile-menu.open {
     right: 0;
+  }
+
+  .mobile-menu-button {
+    padding: 5px 6px;
+  }
+
+  .mobile-menu-button svg {
+    font-size: 18px;
   }
 }

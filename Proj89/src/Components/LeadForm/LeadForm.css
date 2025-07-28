@@ -1,0 +1,109 @@
+.lead-form-container {
+  max-width: 600px;
+  margin: 60px auto;
+  background-color: #f4f4f4;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.lead-form-container h2 {
+  text-align: center;
+  color: #001f3f;
+  margin-bottom: 25px;
+}
+
+.lead-form label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+}
+
+.lead-form input,
+.lead-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.lead-form textarea {
+  resize: vertical;
+}
+
+.lead-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #001f3f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.lead-form button:hover {
+  background-color: #004080;
+}
+
+/* ========== MEDIA QUERIES ========== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .lead-form-container {
+    padding: 25px 20px;
+    margin: 40px 20px;
+  }
+
+  .lead-form-container h2 {
+    font-size: 22px;
+  }
+
+  .lead-form label {
+    font-size: 13.5px;
+  }
+
+  .lead-form input,
+  .lead-form textarea {
+    font-size: 13.5px;
+  }
+
+  .lead-form button {
+    font-size: 15px;
+  }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+  .lead-form-container {
+    padding: 20px 15px;
+    margin: 30px 10px;
+    box-shadow: none;
+    border-radius: 8px;
+  }
+
+  .lead-form-container h2 {
+    font-size: 20px;
+  }
+
+  .lead-form label {
+    font-size: 13px;
+  }
+
+  .lead-form input,
+  .lead-form textarea {
+    font-size: 13px;
+  }
+
+  .lead-form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

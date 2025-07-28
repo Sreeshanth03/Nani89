@@ -14,18 +14,13 @@ const imagePaths = [
 ];
 
 const Coll = () => {
-  // Duplicate the image list for seamless scrolling
-  const fullImageList = [...imagePaths, ...imagePaths];
-
   return (
     <div className="collaboration-section">
       <h2>We Proudly Collaborate With</h2>
-      <div className="marquee">
-        <div className="marquee-content">
-          {fullImageList.map((src, index) => (
-            <img key={index} src={src} alt={`partner-${index}`} />
-          ))}
-        </div>
+      <div className="collaboration-logos">
+        {imagePaths.map((src, index) => (
+          <img key={index} src={src} alt={`partner-${index}`} />
+        ))}
       </div>
     </div>
   );

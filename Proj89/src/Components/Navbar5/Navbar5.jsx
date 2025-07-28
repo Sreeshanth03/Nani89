@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { IoMenuSharp, IoClose } from "react-icons/io5";
 import './Navbar5.css';
 import { Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar5 = () => {
+    const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
 
@@ -20,6 +22,9 @@ const Navbar5 = () => {
     e.preventDefault();
     setFormSubmitted(true);
   };
+  const HandleAbout=()=>{
+     navigate('/About');
+  }
 
   return (
     <div>
@@ -35,14 +40,14 @@ const Navbar5 = () => {
 
         {/* Desktop Navigation Links */}
         <div className="desktop-links">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+          <a href="#home" style={{color:"white"}}>Home</a>
+          <a href="#about" style={{color:"white"}} onClick={HandleAbout}>About</a>
+          <a href="#contact" style={{color:"white"}}>Contact</a>
         </div>
 
         {/* Mobile Menu Button */}
         <button className="mobile-menu-button" onClick={toggleMenu}>
-          {isMenuOpen ? <IoClose size={30} /> : <IoMenuSharp size={30} />}
+          {isMenuOpen ? <IoClose size={10} /> : <IoMenuSharp size={20} />}
         </button>
       </div>
 

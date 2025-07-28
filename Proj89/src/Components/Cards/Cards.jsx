@@ -75,15 +75,15 @@ const services = [
       "E-commerce Copywriting Bots"
     ]
   },
-  {
-    icon: "🚀",
-    title: "Digital Transformation Consulting",
-    points: [
-      "Legacy System Modernization",
-      "Process Automation Roadmapping",
-      "Change Management Strategy"
-    ]
-  }
+  // {
+  //   icon: "🚀",
+  //   title: "Digital Transformation Consulting",
+  //   points: [
+  //     "Legacy System Modernization",
+  //     "Process Automation Roadmapping",
+  //     "Change Management Strategy"
+  //   ]
+  // }
 ];
 
 const Cards = () => {
@@ -122,12 +122,13 @@ const Cards = () => {
       {/* Popup Form */}
       <Modal show={show} onHide={handleClose} centered>
         <Modal.Header closeButton>
-          <Modal.Title>Lead Capture Form</Modal.Title>
+          <Modal.Title>Contact us </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <p><strong>Interested in:</strong> {activeTitle}</p>
           <input type="text" placeholder="Your Name" className="form-control mb-2" />
           <input type="email" placeholder="Your Email" className="form-control mb-2" />
+          <input type='text' placeholder='Your Mobile No' className='form-control mb-2'></input>
           <textarea placeholder="Your Message" className="form-control mb-2" rows="3"></textarea>
           <Button variant="primary" onClick={handleClose}>Submit</Button>
         </Modal.Body>

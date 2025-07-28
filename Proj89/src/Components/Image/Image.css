@@ -1,19 +1,19 @@
 .marquee-container {
   width: 100%;
   overflow: hidden;
-  background-color: #111827;
+  background-color: whitesmoke; /* light background */
   padding: 40px 0;
   text-align: center;
 }
 
 .marquee-title {
-  color: white;
+  color: #111827;
   font-size: 2rem;
   margin-bottom: 15px;
 }
 
 .marquee-subtitle {
-  color: rgba(255, 255, 255, 0.8);
+  color: #333333;
   font-size: 1.2rem;
   margin-bottom: 30px;
 }
@@ -21,7 +21,7 @@
 .marquee {
   display: flex;
   width: fit-content;
-  animation: scroll-marquee 20s linear infinite;
+  animation: scroll-marquee 10s linear infinite;
   align-items: center;
 }
 
