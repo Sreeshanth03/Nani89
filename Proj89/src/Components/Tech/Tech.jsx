@@ -86,7 +86,7 @@ const Tech = () => {
             <li onClick={handleContactClick}>Contact us</li>
             {/* <li onClick={handlePolicyClick}>Policies</li> */}
             <li onClick={handleTermsClick}>Terms & Conditions</li>
-            <li onClick={handlePrivacyClick}>Privacy Policy & Contact us</li>
+            <li onClick={handlePrivacyClick}>Privacy Policy</li>
           </ul>
         </div>
       </div>
