@@ -98,7 +98,7 @@ const Cards = () => {
 
   return (
     <div className="cards-wrapper">
-      <h1 className="cards-title">🔍 <strong>Solutions We Offer</strong></h1>
+<h6 class="cards-title">🔍 Solutions We Offer</h6>
       <div className="cards-grid">
         {services.map((service, index) => (
           <Card

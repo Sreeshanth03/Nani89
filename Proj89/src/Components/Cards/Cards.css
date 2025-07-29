@@ -5,9 +5,9 @@
 
 .cards-title {
   text-align: center;
-  font-weight: bold;
-  font-size: 2rem;
+  font-size: 2.2rem !important;  /* Smaller font size (approx. 12px) */
   margin-bottom: 30px;
+  /* font-weight: normal; */ /* Uncomment if needed */
 }
 
 .cards-grid {

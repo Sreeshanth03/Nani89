@@ -55,8 +55,10 @@ const App = () => {
       <Route path="/LeadForm" element={<LeadForm/>}></Route>
       <Route path='/About' element={<NavAbout/>}></Route>
       <Route path="/Contact" element={<Contact/>}></Route>
+   
          {/* <Route path="/about" element={<About />} /> */}
       <Route path="/privacy" element={<PrivacyPolicy />} />
+         <Route path="/Navbar" element={<Navbar/>}></Route>
           {/* <Tech /> */}
         </Routes> 
         </div>

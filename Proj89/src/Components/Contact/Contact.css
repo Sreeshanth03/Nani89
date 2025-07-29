@@ -1,11 +1,10 @@
 .contact-container {
-  max-width: 600px;
+  max-width: 1000px;
   margin: 80px auto;
   padding: 30px 25px;
   background: linear-gradient(to right, #f7f8fc, #e6ecff);
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  text-align: center;
   font-family: 'Segoe UI', sans-serif;
   animation: fadeIn 1.5s ease forwards;
   opacity: 0;
@@ -14,13 +13,27 @@
 .contact-heading {
   font-size: 26px;
   color: #001f3f;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  text-align: center;
   animation: slideInDown 1s ease-in-out forwards;
   opacity: 0;
 }
 
-.contact-details {
-  margin-top: 10px;
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 280px;
 }
 
 .contact-item {
@@ -40,6 +53,48 @@
 
 .contact-item a:hover {
   color: #004080;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  color: #001f3f;
+  font-weight: 500;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #001f3f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #003366;
+}
+
+.thank-you-message {
+  margin-top: 15px;
+  color: green;
+  font-weight: bold;
 }
 
 /* Animations */
@@ -81,6 +136,10 @@
 
   .contact-heading {
     font-size: 22px;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
   }
 
   .contact-item {

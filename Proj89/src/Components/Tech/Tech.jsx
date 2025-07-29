@@ -15,7 +15,6 @@ const Tech = () => {
   const handleAboutClick = () => navigate('/About');
   const handleJobClick = () => navigate('/LeadForm');
   const handleContactClick = () => navigate('/Contact');
-  const handlePolicyClick = () => navigate('/policies');
   const handleTermsClick = () => navigate('/contact5');
   const handlePrivacyClick = () => navigate('/privacy');
 
@@ -24,14 +23,13 @@ const Tech = () => {
       {/* Top Header */}
       <div className="footer-top-header">
         <div className="footer-address">
-          📍 <strong>Address:</strong> Registered Office: 3-45/1 Ashoka Towers, 16th Floor, Nanakramguda, Financial District, Hyderabad.<br />
-          Regional Office: 4th Floor, Cyber Heights, Hitec City, Hyderabad.
+          📍 <strong>Address:</strong> Hitec City, Hyderabad.
         </div>
         <div className="footer-phone">
           📞 <strong>Phone:</strong> +91 79811 07131
         </div>
         <div className="footer-email">
-          ✉️ <strong>Email:</strong> info.futureinvo@gmail.com
+          ✉️ <strong>Email:</strong> info@futureinvo.com
         </div>
       </div>
 
@@ -42,7 +40,9 @@ const Tech = () => {
           <img
             src="/Icons/WhatsApp Image 2025-07-22 at 19.47.48_1dae13e4.jpg"
             alt="Future Invo Logo"
-            className="footer-logo" width={800} height={800}
+            className="footer-logo"
+            width={800}
+            height={800}
           />
           <p className="footer-tagline">
             Join us to gain industry insights and hands-on experience for success in the digital world.
@@ -57,34 +57,29 @@ const Tech = () => {
           </div>
         </div>
 
-        {/* Middle Column */}
+        {/* Middle Column with structured layout */}
         <div className="footer-middle">
-          <div className="address-block center-align">
-            <h4>Registered Address</h4>
+          <div className="address-block">
+            <h4 style={{ marginLeft: "-120px" }}>Registered Address</h4>
             <p>3-45/1 Ashoka Towers, 16th Floor,<br />Nanakramguda, Financial District, Hyderabad</p>
-          </div>
-          <div className="address-block center-align">
-            <h4>Branches</h4>
-            <p>Siddipet<br />Vizianagaram</p>
-          </div>
-          <div className="address-block center-align">
-            <h4>Operational Address</h4>
+            <h4 style={{ marginLeft: "-120px" }}>Operational Address</h4>
             <p>4th Floor, Cyber Heights,<br />Hitec City, Hyderabad</p>
           </div>
-          <div className="address-block center-align">
-            <h4>Upcoming Branches</h4>
+          <div className="address-block">
+            <h4 style={{ marginLeft: "-220px" }}>Branches</h4>
+            <p>Siddipet<br />Vizianagaram</p>
+            <h4 style={{ marginLeft: "-155px" }}>Upcoming Branches</h4>
             <p>Bangalore<br />Vizag<br />Rajahmundry</p>
           </div>
         </div>
 
         {/* Right Column */}
         <div className="footer-right">
-          <h4 style={{marginLeft:"-220px"}}>QUICK LINKS</h4>
+          <h4 style={{ marginLeft: "-220px" }}>QUICK LINKS</h4>
           <ul className="quick-links">
             <li onClick={handleAboutClick}>About us</li>
             <li onClick={handleJobClick}>Apply for Job</li>
             <li onClick={handleContactClick}>Contact us</li>
-            {/* <li onClick={handlePolicyClick}>Policies</li> */}
             <li onClick={handleTermsClick}>Terms & Conditions</li>
             <li onClick={handlePrivacyClick}>Privacy Policy</li>
           </ul>

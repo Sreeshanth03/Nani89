@@ -8,7 +8,7 @@ const Navbar = () => {
     <div className="navbar-container">
       <div className="navbar-top">
         <div className="desktop-links">
-  
+          {/* Add desktop nav links here if needed */}
         </div>
       </div>
 
@@ -18,6 +18,7 @@ const Navbar = () => {
           <h1>
             <strong>Leading AI & IT Solutions for Seamless Digital Transformation</strong>
           </h1>
+          <h4>FutureInvo Solutions - Shaping Your Digital Future with AI and IT Excellence</h4>
           <h4>
             Harness AI, Data Science & Modern Software to future-proof your
             organization. At Futureinov Solutions, we empower businesses to grow
@@ -29,9 +30,16 @@ const Navbar = () => {
           </h4>
 
           <div className="navbar-buttons">
-        
+            {/* Add buttons here if needed */}
           </div>
         </div>
+      </div>
+
+      <div className="navbar-image-container">
+        <img
+    src="/portrait-young-professional-man-smiling_604472-8539.avif"
+          alt="Professional"
+        />
       </div>
     </div>
   );

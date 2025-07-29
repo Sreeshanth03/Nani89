@@ -1,9 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './NavAbout.css';
 
 const NavAbout = () => {
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate('/');
+  };
+
   return (
-    <div className="about-container">
+    <div className="about-container" id="about">
+      <button className="back-button" onClick={handleBack}>← Back</button>
+
       <h1>About Futureinvo Technologies</h1>
       <h2>“Leading AI & IT Solutions for Seamless Digital Transformation”</h2>
 
@@ -76,4 +85,3 @@ const NavAbout = () => {
 };
 
 export default NavAbout;
-

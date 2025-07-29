@@ -4,10 +4,10 @@ import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 
 const achievements = [
-  { emoji: "🧑‍🏫", number: 120, suffix: "+", label: "Trainers" },
-  { emoji: "🤝", number: 48000, suffix: "+", label: "Trained Students" },
-  { emoji: "⭐", number: 39000, suffix: "+", label: "Professionals" },
-  { emoji: "📘", number: 14, suffix: "+", label: "Years" },
+  { emoji: "🧑‍🏫", number: 70, suffix: "+", label: "Tech Modules Delivered" },
+  { emoji: "🤝", number: 35, suffix: "+", label: "Live PlatForms" },
+  { emoji: "⭐", number: 50, suffix: "+", label: "Engineers OnBoard" },
+  { emoji: "📘", number: 20, suffix: "+", label: "AI Use Cases" },
 ];
 
 const Achi = () => {

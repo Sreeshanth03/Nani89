@@ -79,7 +79,7 @@
   color: #00aced;
 }
 
-/* Section Titles */
+/* Quick Links */
 .footer-right h4,
 .address-block h4 {
   font-size: 16px;
@@ -87,9 +87,9 @@
   margin-bottom: 10px;
   font-family: Arial, sans-serif;
   color: white;
+  text-decoration: underline;
 }
 
-/* Quick Links */
 .quick-links {
   list-style: none;
   padding-left: 0;
@@ -122,14 +122,22 @@
   color: #00aced;
 }
 
-/* Address Section */
+/* Middle Column Grid Layout */
+.footer-middle {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  text-align: left;
+  flex: 2;
+}
+
 .address-block {
   margin-bottom: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 .address-block p {
-  margin: 5px 0;
+  margin: 5px 0 15px 0;
   font-size: 14px;
   color: #ccc;
   line-height: 1.5;
@@ -144,9 +152,7 @@
   color: #aaa;
   font-family: Arial, sans-serif;
 }
-.footer-middle {
-  flex: 2;
-}
+
 /* Tablets */
 @media (max-width: 1024px) {
   .footer-main {
@@ -209,5 +215,13 @@
 
   .address-block p {
     font-size: 13px;
+  }
+
+  .footer-middle {
+    grid-template-columns: 1fr;
+  }
+
+  .address-block {
+    text-align: center;
   }
 }

@@ -62,7 +62,7 @@ const Industries = () => {
   ];
 
   return (
-    <div className="industries-container" id="about">
+    <div className="industries-container" >
       <h4 className="industries-title">Industries We Empower</h4>
       <div className="industries-grid">
         {industries.map((industry, index) => (
